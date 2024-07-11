@@ -1,0 +1,50 @@
+@import "../../../../sass/variables";
+
+.second-block {
+
+  &__heading {
+    text-align: end;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__button {
+    font: {
+      size: 1rem;
+      weight: bold;
+    }
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    border: 1px solid $main-color;
+    border-radius: 2px;
+    color: rgba($main-color, .6);
+
+    &:hover {
+      background: linear-gradient(90deg, rgba(205,116,0,1), rgba(254,158,34,1));
+      color: rgba($main-color, 1);
+    }
+  }
+}
+
+//Media Queries
+
+@media screen and (min-width: 960px) {
+  .second-block {
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__buttons {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+  }
+}
