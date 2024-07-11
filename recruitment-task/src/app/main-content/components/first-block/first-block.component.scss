@@ -1,0 +1,67 @@
+@import "../../../../sass/variables";
+
+.first-block {
+
+  &__radios {
+    display: flex;
+    flex-direction: column;
+
+    &--button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      color: rgba($main-color, 0.7);
+
+      span {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    appearance: none;
+    color: currentColor;
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid $main-color;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      width: .8rem;
+      height: .8rem;
+      border-radius: 50%;
+      transform: scale(0);
+      background-color: $main-color;
+      transition: transform 0.2s;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    &:checked + span {
+      color: rgba($main-color, 1);
+    }
+  }
+}
+
+//Media Queries
+
+@media screen and (min-width: 960px) {
+  .first-block {
+    input[type="radio"] {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      &::before {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
