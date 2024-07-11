@@ -11,7 +11,7 @@
 
   &__heading {
     position: relative;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: black 1px 2px 2px;
 
     &::after {
@@ -25,6 +25,21 @@
       left: 50%;
       transform: translateX(-50%);
 
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//Media Queries
+
+@media screen and (min-width: 960px) {
+  .main {
+    &__heading {
+      font-size: 2.5rem;
     }
   }
 }
