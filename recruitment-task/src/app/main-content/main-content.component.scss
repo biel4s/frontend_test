@@ -1,0 +1,30 @@
+@import "../../sass/variables";
+
+.main {
+  background-color: $main-background;
+  color: $main-color;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__heading {
+    position: relative;
+    font-size: 2.5rem;
+    text-shadow: black 1px 2px 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80%;
+      height: .1rem;
+      background: $main-color;
+      margin-top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+}
