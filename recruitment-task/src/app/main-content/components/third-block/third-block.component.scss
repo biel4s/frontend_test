@@ -1,0 +1,13 @@
+@import "../../../../sass/variables";
+
+.third-block {
+
+  &__heading {
+    margin: 3rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
