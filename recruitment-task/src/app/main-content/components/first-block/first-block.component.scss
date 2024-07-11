@@ -2,6 +2,10 @@
 
 .first-block {
 
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
   &__radios {
     display: flex;
     flex-direction: column;
@@ -15,6 +19,7 @@
 
       span {
         margin-left: 1rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -54,6 +59,11 @@
 
 @media screen and (min-width: 960px) {
   .first-block {
+
+    &__heading {
+      text-align: center;
+    }
+
     input[type="radio"] {
       width: 2.5rem;
       height: 2.5rem;

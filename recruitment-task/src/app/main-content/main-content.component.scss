@@ -33,13 +33,12 @@
     padding: 0 2rem;
   }
 
-  app-first-block,
-  app-second-block {
-    flex-basis: 50%;
+  app-first-block, app-second-block {
+    width: 50%;
   }
 
   app-third-block {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -52,7 +51,7 @@
     }
 
     app-first-block, app-second-block, app-third-block {
-      flex: 1 1 auto;
+      width: 33.33%;
     }
   }
 }
