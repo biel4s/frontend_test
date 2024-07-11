@@ -1,0 +1,61 @@
+@import "../../sass/variables";
+
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  background-color: $header-background;
+  color: white;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: $logo-background;
+    border-radius: 50%;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: $logo-hover;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    padding: .5rem;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+}
+
+//Media Queries
+
+@media screen and (min-width: 960px) {
+  .header {
+    padding: 1rem 2.5rem;
+
+    &__icon {
+      width: 5.5rem;
+      height: 5.5rem;
+      padding: 0.8rem
+    }
+
+    &__text {
+      font-size: 2.2rem;
+    }
+  }
+}
