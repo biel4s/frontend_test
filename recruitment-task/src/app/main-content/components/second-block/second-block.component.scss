@@ -3,6 +3,7 @@
 .second-block {
 
   &__heading {
+    text-transform: uppercase;
     text-align: end;
     margin-bottom: 2rem;
   }
@@ -20,15 +21,16 @@
     }
     cursor: pointer;
     align-self: flex-end;
+    text-transform: uppercase;
     padding: 1rem 3rem;
     background-color: transparent;
     border: 1px solid $main-color;
-    border-radius: 2px;
+    border-radius: .1rem;
     color: rgba($main-color, .6);
 
     &:hover {
       background: linear-gradient(90deg, rgba(205,116,0,1), rgba(254,158,34,1));
-      color: rgba($main-color, 1);
+      color: $main-color;
     }
   }
 }
