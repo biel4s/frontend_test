@@ -3,6 +3,7 @@
 .first-block {
 
   &__heading {
+    text-transform: uppercase;
     margin-bottom: 2rem;
   }
 
@@ -18,7 +19,7 @@
       color: rgba($main-color, .7);
 
       span {
-        margin-left: 1rem;
+        margin-left: .5rem;
         font-size: 1.2rem;
       }
     }
@@ -50,7 +51,8 @@
     }
 
     &:checked + span {
-      color: rgba($main-color, 1);
+      color: $main-color;
+      font-weight: bold;
     }
   }
 }
@@ -71,6 +73,14 @@
       &::before {
         width: 1rem;
         height: 1rem;
+      }
+    }
+
+    &__radios {
+      &--button{
+        span {
+          margin-left: 1rem;
+        }
       }
     }
   }
