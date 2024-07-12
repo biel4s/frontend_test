@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataService} from "../services/data.service";
 
 @Component({
   selector: 'app-footer',
@@ -10,8 +11,20 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   protected isMenuActive: boolean = false;
 
+  constructor(private dataService: DataService) { }
+
+
   toggleMenu(): void {
     this.isMenuActive = !this.isMenuActive;
   }
 
+  resetSettings(): void {
+    this.dataService.addName('');
+    this.toggleMenu();
+  }
+
+  showName(): void {
+    this.dataService.addName('Kamil Bielawski');
+    this.toggleMenu();
+  }
 }

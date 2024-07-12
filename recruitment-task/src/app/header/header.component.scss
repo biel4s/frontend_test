@@ -2,6 +2,7 @@
 
 .header {
   position: sticky;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -33,7 +34,9 @@
 
   &__info {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: end;
   }
 
   &__text {
