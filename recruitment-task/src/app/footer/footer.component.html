@@ -1,0 +1,26 @@
+<footer class="footer">
+  <div class="footer__test">
+  <div class="footer__square">
+    <span class="footer__text">css is awesome</span>
+  </div>
+  </div>
+  <p class="footer__brand">nabthat</p>
+  <div class="footer__test">
+  <div class="footer__show">
+    <button class="footer__button" (click)="toggleMenu()">
+      <span>pokaż</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="footer__arrow"  [class.footer__arrow--rotate]="isMenuActive" viewBox="6.41 8.42 11.18 6.59"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+    </button>
+    <div class="footer__menu" [class.footer__menu--active]="isMenuActive">
+      <button class="footer__menu--btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu__arrow" viewBox="6.41 8.42 11.18 6.59"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+        zresetuj ustawienia
+      </button>
+      <button class="footer__menu--btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu__arrow" viewBox="6.41 8.42 11.18 6.59"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+        pokaż dane osobowe
+      </button>
+    </div>
+  </div>
+  </div>
+</footer>

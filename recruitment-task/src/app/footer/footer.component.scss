@@ -1,0 +1,190 @@
+@import "../../sass/variables";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  background-color: $footer-background;
+  border-top: 2px solid black;
+
+  &__test {
+    width: 50%;
+  }
+
+  &__square {
+    cursor: pointer;
+    position: relative;
+    width: 6.2rem;
+    height: 6.2rem;
+    text-transform: uppercase;
+    word-spacing: 6rem;
+    font-size: 1.5rem;
+    color: rgba($main-color, .1);
+    padding: .4rem;
+    transition: color ease-in-out .2s;
+
+    &:hover {
+      color: rgba($main-color, 1);
+      border-color: #8a663f;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba($main-color, .1);
+    }
+
+    &:hover::before {
+      animation: rotate 1s ease-out;
+      border-color: #8a663f;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+
+  &__brand {
+    display: none;
+  }
+
+  &__show {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    font: {
+      size: 1rem;
+      weight: bold;
+    }
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgba($main-color, .5);
+    text-transform: uppercase;
+    border: 1px solid rgba($main-color, .2);
+    border-radius: .2rem;
+    padding: 1rem 5rem;
+
+    &:hover {
+      color: $main-color;
+      border-color: $main-color;
+
+      .footer__arrow {
+        fill: $main-color;
+      }
+    }
+  }
+
+  &__arrow {
+    width: .8rem;
+    height: .8rem;
+    fill: rgba($main-color, .5);
+    margin-left: .5rem;
+    transition: transform 0.3s ease-in-out;
+
+    &--rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    width: 15rem;
+    transform: translateY(30%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem 2rem;
+    background-color: $main-color;
+    border-radius: .1rem;
+    transition: ease-in-out .3s;
+    -webkit-box-shadow: 0 0 20px 5px #000;
+    -moz-box-shadow: 0 0 20px 5px #000;
+    box-shadow: 0 0 20px 5px #000;
+
+    &--active {
+      transform: translateY(-110%);
+    }
+
+    &--btn {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      color: black;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      padding: .4rem 0;
+
+      &:hover {
+        color: $footer-hover;
+
+        .menu__arrow {
+          fill: $footer-hover;
+        }
+      }
+    }
+
+    .menu__arrow {
+      width: .8rem;
+      height: .8rem;
+      fill: rgba($main-color, .5);
+      fill: black;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//Media queries
+
+@media screen and (min-width: 960px) {
+  .footer {
+    padding: 1.3rem 3rem;
+
+    &__brand {
+      display: flex;
+      font-size: 1.5rem;
+      color: rgba($main-color, .1);
+      align-items: center;
+      width: 10%;
+
+      &::before {
+        content: "";
+        background: rgba($main-color, .1);
+        height: 1px;
+        margin-right: 5px;
+        width: 100%;
+      }
+
+      &::after {
+        content: "";
+        background: rgba($main-color, .1);
+        height: 1px;
+        margin-left: 5px;
+        width: 100%;
+      }
+    }
+
+    &menu__arow {
+      margin-right: .5rem;
+    }
+  }
+}
