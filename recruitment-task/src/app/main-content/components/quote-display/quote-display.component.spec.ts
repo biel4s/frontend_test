@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstBlockComponent } from './first-block.component';
+import { QuoteDisplayComponent } from './quote-display.component';
 
-describe('FirstBlockComponent', () => {
-  let component: FirstBlockComponent;
-  let fixture: ComponentFixture<FirstBlockComponent>;
+describe('ThirdBlockComponent', () => {
+  let component: QuoteDisplayComponent;
+  let fixture: ComponentFixture<QuoteDisplayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FirstBlockComponent]
+      imports: [QuoteDisplayComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(FirstBlockComponent);
+
+    fixture = TestBed.createComponent(QuoteDisplayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import {FirstBlockComponent} from "./components/first-block/first-block.component";
-import {SecondBlockComponent} from "./components/second-block/second-block.component";
-import {ThirdBlockComponent} from "./components/third-block/third-block.component";
+import {OptionSelectorComponent} from "./components/option-selector/option-selector.component";
+import {ModifierComponent} from "./components/modifier/modifier.component";
+import {QuoteDisplayComponent} from "./components/quote-display/quote-display.component";
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
   imports: [
-    FirstBlockComponent,
-    SecondBlockComponent,
-    ThirdBlockComponent
+    OptionSelectorComponent,
+    ModifierComponent,
+    QuoteDisplayComponent
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'

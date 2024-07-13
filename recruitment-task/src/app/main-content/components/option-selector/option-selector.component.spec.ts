@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThirdBlockComponent } from './third-block.component';
+import { OptionSelectorComponent } from './option-selector.component';
 
-describe('ThirdBlockComponent', () => {
-  let component: ThirdBlockComponent;
-  let fixture: ComponentFixture<ThirdBlockComponent>;
+describe('FirstBlockComponent', () => {
+  let component: OptionSelectorComponent;
+  let fixture: ComponentFixture<OptionSelectorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ThirdBlockComponent]
+      imports: [OptionSelectorComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(ThirdBlockComponent);
+
+    fixture = TestBed.createComponent(OptionSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
