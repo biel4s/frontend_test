@@ -94,10 +94,12 @@ export class DataService {
           alert('Nie ma więcej cytatów do wykorzystania.');
           return;
         }
+
         let randomIndex: number;
         do {
           randomIndex = Math.floor(Math.random() * this.quotes.length);
-        } while (randomIndex >= this.quotes.length || this.addedQuotes.map(q => this.quotes.indexOf(q)).includes(randomIndex));
+        } while (this.addedQuotes.includes(this.quotes[randomIndex]));
+
         nextQuote = this.quotes[randomIndex];
         this.currentQuote.next((this.currentQuote.value) + ' ' + nextQuote);
         this.addedQuotes.push(nextQuote);
