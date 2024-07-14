@@ -33,14 +33,15 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 2rem;
   }
 
-  app-first-block, app-second-block {
+  app-option-selector, app-modifier {
     width: 50%;
   }
 
-  app-third-block {
+  app-quote-display {
     width: 100%;
   }
 }
@@ -57,7 +58,7 @@
       font-size: 2.5rem;
     }
 
-    app-first-block, app-second-block, app-third-block {
+    app-option-selector, app-modifier, app-quote-display {
       width: 33.33%;
     }
   }
