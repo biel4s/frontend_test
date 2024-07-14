@@ -2,15 +2,15 @@
   <h2 class="first-block__heading">blok pierwszy</h2>
   <div class="first-block__radios">
     <label class="first-block__radios--button">
-      <input type="radio" id="first" value="first" name="option">
+      <input type="radio" id="first" value="1" (change)="onOptionChange(0)" name="option">
       <span>Opcja pierwsza</span>
     </label>
     <label class="first-block__radios--button">
-      <input type="radio" id="second" value="second" name="option">
+      <input type="radio" id="second" value="2" (change)="onOptionChange(1)" name="option">
       <span>Opcja druga</span>
     </label>
     <label class="first-block__radios--button">
-      <input type="radio" id="random" value="random" name="option">
+      <input type="radio" id="random" value="random" (change)="onOptionChange(2)" name="option">
       <span>Opcja trzecia</span>
     </label>
   </div>

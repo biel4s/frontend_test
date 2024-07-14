@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {DataService} from "../../../services/data.service";
 
 @Component({
@@ -9,7 +9,10 @@ import {DataService} from "../../../services/data.service";
   styleUrl: './option-selector.component.scss'
 })
 export class OptionSelectorComponent {
+  constructor(private dataService: DataService) {
+  }
 
-  constructor(private dataService: DataService) {  }
-
+  onOptionChange(option: number): void {
+    this.dataService.setSelectedOption(option);
+  }
 }
