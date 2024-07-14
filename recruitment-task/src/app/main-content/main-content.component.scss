@@ -2,6 +2,7 @@
 
 .main {
   color: $main-color;
+  padding-top: 6rem;
 
   &__title {
     display: flex;
@@ -48,14 +49,23 @@
 
 //Media Queries
 
+@media screen and (min-width: 1200px) {
+  app-option-selector, app-modifier, app-quote-display {
+    width: 33.33%;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .main {
+    padding-top: 10rem;
+
     &__title {
-      padding: 4rem 0;
+      padding: 1rem 0 3rem;
     }
 
+
     &__heading {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     app-option-selector, app-modifier, app-quote-display {

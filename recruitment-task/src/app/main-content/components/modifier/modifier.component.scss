@@ -37,6 +37,16 @@
 
 //Media Queries
 
+@media screen and (min-width: 1200px) {
+  .second-block {
+
+    &__buttons {
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+  }
+}
+
 @media screen and (min-width: 960px) {
   .second-block {
 
@@ -46,9 +56,12 @@
     }
 
     &__buttons {
-      flex-direction: row;
       justify-content: center;
-      gap: 2.5rem;
+
+    }
+
+    &__button {
+      align-self: center;
     }
   }
 }
