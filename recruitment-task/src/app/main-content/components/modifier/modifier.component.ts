@@ -12,8 +12,11 @@ export class ModifierComponent {
 
   constructor(private dataService: DataService) {  }
 
-  replaceQuote(): void {
+  replaceCurrentQuote(): void {
     this.dataService.replaceQuote();
   }
 
+  addNewQuote(): void {
+    this.dataService.addQuote();
+  }
 }

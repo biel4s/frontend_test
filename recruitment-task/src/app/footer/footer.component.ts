@@ -19,7 +19,7 @@ export class FooterComponent {
   }
 
   resetSettings(): void {
-    this.dataService.addName('');
+    this.dataService.resetSettings();
     this.toggleMenu();
   }
 
