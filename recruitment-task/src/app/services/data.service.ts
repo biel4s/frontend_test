@@ -70,54 +70,49 @@ export class DataService {
     const selectedOption: number = this.selectedOption.value;
     let nextQuote: string = '';
 
+    const handleQuote = (quoteIndex: number): void => {
+      nextQuote = this.quotes[quoteIndex];
+      if (this.currentQuote.value === nextQuote || this.addedQuotes.includes(nextQuote)) {
+        alert('Cytat nie jest unikalny!');
+      } else {
+        this.addedQuotes.push(nextQuote);
+        const updatedQuotes: string = this.addedQuotes.map(newQuote => `<span>${newQuote}</span>`).join(' ');
+        this.currentQuote.next(updatedQuotes);
+      }
+    };
+
     switch (selectedOption) {
       case 0:
-        nextQuote = this.quotes[0];
-        if (this.currentQuote.value === nextQuote || this.addedQuotes.includes(nextQuote)) {
-          alert('Wartość nie jest unikalna!');
-        } else {
-          this.currentQuote.next(this.currentQuote.value + ' ' + nextQuote);
-          this.addedQuotes.push(nextQuote);
-        }
+        handleQuote(0);
         break;
       case 1:
-        nextQuote = this.quotes[1];
-        if (this.currentQuote.value === nextQuote || this.addedQuotes.includes(nextQuote)) {
-          alert('Wartość nie jest unikalna!');
-        } else {
-          this.currentQuote.next(this.currentQuote.value + ' ' + nextQuote);
-          this.addedQuotes.push(nextQuote);
-        }
+        handleQuote(1);
         break;
       case 2:
         if (this.addedQuotes.length >= this.quotes.length) {
           alert('Nie ma więcej cytatów do wykorzystania.');
           return;
         }
-
         let randomIndex: number;
         do {
           randomIndex = Math.floor(Math.random() * this.quotes.length);
         } while (this.addedQuotes.includes(this.quotes[randomIndex]));
-
-        nextQuote = this.quotes[randomIndex];
-        this.currentQuote.next((this.currentQuote.value) + ' ' + nextQuote);
-        this.addedQuotes.push(nextQuote);
+        handleQuote(randomIndex);
         break;
       default:
-        console.log("Invalid option selected.");
+        console.log("Niepoprawna opcja.");
         break;
     }
+  }
+
+  addName(name: string): void {
+    this.nameData.next(name);
   }
 
   resetSettings(): void {
     this.addedQuotes = [];
     this.nameData.next('');
     this.currentQuote.next('');
-  }
-
-  addName(name: string): void {
-    this.nameData.next(name);
   }
 }
 
