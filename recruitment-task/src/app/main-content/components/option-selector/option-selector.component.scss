@@ -1,6 +1,6 @@
 @import "../../../../sass/variables";
 
-.first-block {
+.option-selector {
 
   &__heading {
     text-transform: uppercase;
@@ -60,7 +60,7 @@
 //Media Queries
 
 @media screen and (min-width: 960px) {
-  .first-block {
+  .option-selector {
 
     &__heading {
       text-align: center;

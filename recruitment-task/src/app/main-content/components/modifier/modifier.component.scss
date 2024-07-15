@@ -1,6 +1,6 @@
 @import "../../../../sass/variables";
 
-.second-block {
+.modifier {
 
   &__heading {
     text-transform: uppercase;
@@ -38,7 +38,7 @@
 //Media Queries
 
 @media screen and (min-width: 1200px) {
-  .second-block {
+  .modifier {
 
     &__buttons {
       flex-direction: row;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (min-width: 960px) {
-  .second-block {
+  .modifier {
 
     &__heading {
       text-align: center;

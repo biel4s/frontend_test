@@ -1,6 +1,7 @@
 @import "../../../../sass/variables";
 
-.third-block {
+.quote-display {
+
   &__heading {
     margin: 2.5rem 0;
     text-align: center;
@@ -23,7 +24,8 @@
 //Media Queries
 
 @media screen and (min-width: 960px) {
-  .third-block {
+  .quote-display {
+
     &__heading {
       margin: 0.83em 0 4rem;
     }
