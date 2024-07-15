@@ -11,19 +11,19 @@ export class DataService {
   private readonly apiUrl: string = environment.apiBaseUrl;
   private readonly nameData: BehaviorSubject<string> = new BehaviorSubject<string>('');
   private readonly selectedOption: BehaviorSubject<number> = new BehaviorSubject<number>(NaN);
-  readonly currentQuote: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  private addedQuotes: string[] = [];
-  private quotes: string[] = [];
+  readonly currentText: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private addedTexts: string[] = [];
+  private textArray: string[] = [];
   nameData$: Observable<string> = this.nameData.asObservable();
 
   constructor(private http: HttpClient) {
-    this.fetchQuotes();
+    this.fetchData();
   }
 
-  fetchQuotes() {
+  fetchData() {
     this.http.get<string[]>(this.apiUrl).subscribe({
       next: (data: string[]): void => {
-        this.quotes = data;
+        this.textArray = data;
       },
       error: (err): void => {
         console.error(err);
@@ -35,70 +35,70 @@ export class DataService {
     this.selectedOption.next(option);
   }
 
-  setCurrentQuote(quote: string): void {
-    this.currentQuote.next(quote);
+  setCurrentText(text: string): void {
+    this.currentText.next(text);
   }
 
-  replaceQuote(): void {
+  replaceText(): void {
     const selectedOption: number = this.selectedOption.value;
-    const currentIndex: number = this.quotes.indexOf(this.currentQuote.value);
-    this.addedQuotes = [];
+    const currentIndex: number = this.textArray.indexOf(this.currentText.value);
+    this.addedTexts = [];
 
     switch (selectedOption) {
       case 0:
-        this.setCurrentQuote(this.quotes[0]);
-        this.addedQuotes = [this.quotes[0]];
+        this.setCurrentText(this.textArray[0]);
+        this.addedTexts = [this.textArray[0]];
         break;
       case 1:
-        this.setCurrentQuote(this.quotes[1]);
-        this.addedQuotes = [this.quotes[1]];
+        this.setCurrentText(this.textArray[1]);
+        this.addedTexts = [this.textArray[1]];
         break;
       case 2:
-        let randomIndex: number = Math.floor(Math.random() * this.quotes.length);
+        let randomIndex: number = Math.floor(Math.random() * this.textArray.length);
         while (currentIndex === randomIndex) {
-          randomIndex = Math.floor(Math.random() * this.quotes.length);
+          randomIndex = Math.floor(Math.random() * this.textArray.length);
         }
-        this.setCurrentQuote(this.quotes[randomIndex]);
-        this.addedQuotes = [this.quotes[randomIndex]];
+        this.setCurrentText(this.textArray[randomIndex]);
+        this.addedTexts = [this.textArray[randomIndex]];
         break;
       default:
         break;
     }
   }
 
-  addQuote(): void {
+  addText(): void {
     const selectedOption: number = this.selectedOption.value;
-    let nextQuote: string = '';
+    let nextText: string = '';
 
-    const handleQuote = (quoteIndex: number): void => {
-      nextQuote = this.quotes[quoteIndex];
-      if (this.currentQuote.value === nextQuote || this.addedQuotes.includes(nextQuote)) {
-        alert('Cytat nie jest unikalny!');
+    const handleText = (textIndex: number): void => {
+      nextText = this.textArray[textIndex];
+      if (this.currentText.value === nextText || this.addedTexts.includes(nextText)) {
+        alert('Tekst nie jest unikalny!');
       } else {
-        this.addedQuotes.push(nextQuote);
-        const updatedQuotes: string =
-          this.addedQuotes.sort().map(newQuote => `<span>${newQuote}</span>`).join(' ');
-        this.currentQuote.next(updatedQuotes);
+        this.addedTexts.push(nextText);
+        const updatedTexts: string =
+          this.addedTexts.sort().map(newText => `<span>${newText}</span>`).join(' ');
+        this.currentText.next(updatedTexts);
       }
     };
 
     switch (selectedOption) {
       case 0:
-        handleQuote(0);
+        handleText(0);
         break;
       case 1:
-        handleQuote(1);
+        handleText(1);
         break;
       case 2:
-        if (this.addedQuotes.length >= this.quotes.length) {
-          alert('Nie ma więcej cytatów do wykorzystania.');
+        if (this.addedTexts.length >= this.textArray.length) {
+          alert('Nie ma więcej tekstów do wykorzystania.');
           return;
         }
         let randomIndex: number;
         do {
-          randomIndex = Math.floor(Math.random() * this.quotes.length);
-        } while (this.addedQuotes.includes(this.quotes[randomIndex]));
-        handleQuote(randomIndex);
+          randomIndex = Math.floor(Math.random() * this.textArray.length);
+        } while (this.addedTexts.includes(this.textArray[randomIndex]));
+        handleText(randomIndex);
         break;
       default:
         console.log("Niepoprawna opcja.");
@@ -111,10 +111,8 @@ export class DataService {
   }
 
   resetSettings(): void {
-    this.addedQuotes = [];
+    this.addedTexts = [];
     this.nameData.next('');
-    this.currentQuote.next('');
+    this.currentText.next('');
   }
 }
-
-

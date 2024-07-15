@@ -4,21 +4,21 @@ import {Subscription} from "rxjs";
 import {DataService} from "../../../services/data.service";
 
 @Component({
-  selector: 'app-quote-display',
+  selector: 'app-text-display',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './quote-display.component.html',
-  styleUrl: './quote-display.component.scss'
+  templateUrl: './text-display.component.html',
+  styleUrl: './text-display.component.scss'
 })
-export class QuoteDisplayComponent implements OnInit {
-  displayQuote: string = '';
+export class TextDisplayComponent implements OnInit {
+  displayText: string = '';
   subscription: Subscription | undefined;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.subscription = this.dataService.currentQuote.subscribe(
-      quote => this.displayQuote = quote
+    this.subscription = this.dataService.currentText.subscribe(
+      text => this.displayText = text
     );
   }
 }

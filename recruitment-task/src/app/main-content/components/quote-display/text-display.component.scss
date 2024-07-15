@@ -1,6 +1,6 @@
 @import "../../../../sass/variables";
 
-.quote-display {
+.text-display {
 
   &__heading {
     margin: 2.5rem 0;
@@ -11,7 +11,7 @@
     text-overflow: ellipsis;
   }
 
-  &__quote {
+  &__text {
     font: {
       size: 1.1rem;
     }
@@ -24,7 +24,7 @@
 //Media Queries
 
 @media screen and (min-width: 960px) {
-  .quote-display {
+  .text-display {
 
     &__heading {
       margin: 0.83em 0 4rem;

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModifierComponent } from './modifier.component';
 
-describe('SecondBlockComponent', () => {
+describe('ModifierComponent', () => {
   let component: ModifierComponent;
   let fixture: ComponentFixture<ModifierComponent>;
 

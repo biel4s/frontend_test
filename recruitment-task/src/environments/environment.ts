@@ -1,4 +1,4 @@
 export const environment = {
-  apiBaseUrl: '/assets/quotes.json',
+  apiBaseUrl: '/assets/data.json',
   production: false,
 };

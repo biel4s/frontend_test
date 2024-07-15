@@ -41,7 +41,7 @@
     width: 50%;
   }
 
-  app-quote-display {
+  app-text-display {
     width: 100%;
   }
 }
@@ -49,7 +49,7 @@
 //Media Queries
 
 @media screen and (min-width: 1200px) {
-  app-option-selector, app-modifier, app-quote-display {
+  app-option-selector, app-modifier, app-text-display {
     width: 33.33%;
   }
 }
@@ -65,7 +65,7 @@
       font-size: 3rem;
     }
 
-    app-option-selector, app-modifier, app-quote-display {
+    app-option-selector, app-modifier, app-text-display {
       width: 33.33%;
     }
   }

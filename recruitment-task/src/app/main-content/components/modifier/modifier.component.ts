@@ -12,11 +12,11 @@ export class ModifierComponent {
 
   constructor(private dataService: DataService) {  }
 
-  replaceCurrentQuote(): void {
-    this.dataService.replaceQuote();
+  replaceCurrentText(): void {
+    this.dataService.replaceText();
   }
 
-  addNewQuote(): void {
-    this.dataService.addQuote();
+  addNewText(): void {
+    this.dataService.addText();
   }
 }

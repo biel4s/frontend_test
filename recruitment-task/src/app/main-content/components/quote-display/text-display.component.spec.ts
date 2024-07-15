@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuoteDisplayComponent } from './quote-display.component';
+import { TextDisplayComponent } from './text-display.component';
 
-describe('ThirdBlockComponent', () => {
-  let component: QuoteDisplayComponent;
-  let fixture: ComponentFixture<QuoteDisplayComponent>;
+describe('TextDisplayComponent', () => {
+  let component: TextDisplayComponent;
+  let fixture: ComponentFixture<TextDisplayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [QuoteDisplayComponent]
+      imports: [TextDisplayComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(QuoteDisplayComponent);
+    fixture = TestBed.createComponent(TextDisplayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

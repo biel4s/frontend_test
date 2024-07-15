@@ -13,7 +13,6 @@ export class FooterComponent {
 
   constructor(private dataService: DataService) { }
 
-
   toggleMenu(): void {
     this.isMenuActive = !this.isMenuActive;
   }
