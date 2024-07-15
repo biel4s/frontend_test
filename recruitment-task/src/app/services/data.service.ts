@@ -76,7 +76,8 @@ export class DataService {
         alert('Cytat nie jest unikalny!');
       } else {
         this.addedQuotes.push(nextQuote);
-        const updatedQuotes: string = this.addedQuotes.map(newQuote => `<span>${newQuote}</span>`).join(' ');
+        const updatedQuotes: string =
+          this.addedQuotes.sort().map(newQuote => `<span>${newQuote}</span>`).join(' ');
         this.currentQuote.next(updatedQuotes);
       }
     };
