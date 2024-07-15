@@ -1,27 +1,15 @@
-# RecruitmentTask
+# Nabthat front end - zadanie rekrutacyjne
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+### Wykonane wszystkie cele główne oraz wymienione cele dodatkowe:
+- Osadzenie całego zadania w jakimś JSowym frameworku (najlepiej Angular).
+- Brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg).
+- CSS IS AWESOME w footerze - po najechaniu myszką ramka (bez tekstu) powinna wykonać animowany obrót.
+- Zastosowanie BEM.
+- Spełnianie zasad a11y.
+- Logiczne wykorzystanie jednostek rem, em, vh, vw (w efekcie jak najmniejsze użycie jednostki px) - w taki sposób by w efekcie responsywność spełniona została jak najmniejszą ilością kodu.
+- Mobile first.
+- Doklejając treść sprawić by w ostatnim bloku treści były posortowane alfabetycznie.
+- Przy doklejaniu treści w przypadku niemożliwości spełnienia warunku by była unikalna wyświetlić stosowny komunikat (np. alert/dialog/modal).
+- Rezultat prac wrzucić do podglądu na jakąś darmową platformę (np. netlify/heroku).
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://nabthat-frontend-test-kamilbielawski.netlify.app
